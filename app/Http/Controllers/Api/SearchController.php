@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Region;
 use App\Occupation;
 use App\NeisEnterprise;
+use App\MedianHousePrice;
 use App\IncomeByOccupation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -35,6 +36,9 @@ class SearchController extends Controller
 
         // NEIS Stats
         $neisStats = NeisEnterprise::all();
+
+        // property prices
+        $housePrices = MedianHousePrice::where('date', 'Mar-2019')->first();
 
         $states = Region::select('state')->distinct()->get();
 
@@ -80,10 +84,52 @@ class SearchController extends Controller
                 } else {
                     $neisStat['region'] = $state->state.' All Areas';
                 }
-                $neisStat['enterprises'] = $neis->enterprises;
+                $neisStat['enterprises'] = (int) $neis->enterprises;
                 $neisStat['success_rate'] = round($neis->successes / $neis->enterprises, 2) * 100;
                 $stateData['neis'][] = $neisStat;
             }
+
+
+            /**
+             * House price
+             */
+            $stateProperty = [];
+            switch ($state->state) {
+                case 'QLD':
+                    $stateProperty['metro'] = $housePrices->median_price_brisbane * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_qld * 1000;
+                    break;
+                case 'NSW':
+                    $stateProperty['metro'] = $housePrices->median_price_sydney * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_nsw * 1000;
+                    break;
+                case 'VIC':
+                    $stateProperty['metro'] = $housePrices->median_price_melbourne * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_vic * 1000;
+                    break;
+                case 'TAS':
+                    $stateProperty['metro'] = $housePrices->median_price_hobart * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_tas * 1000;
+                    break;
+                case 'SA':
+                    $stateProperty['metro'] = $housePrices->median_price_adelaide * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_sa * 1000;
+                    break;
+                case 'WA':
+                    $stateProperty['metro'] = $housePrices->median_price_perth * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_wa * 1000;
+                    break;
+                case 'NT':
+                    $stateProperty['metro'] = $housePrices->median_price_darwin * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_nt * 1000;
+                    break;
+                case 'ACT':
+                    $stateProperty['metro'] = $housePrices->median_price_canberra * 1000;
+                    $stateProperty['all'] = $housePrices->median_price_canberra * 1000;
+            }
+            $stateData['property'] = $stateProperty;
+
+
 
             $searchData[$state->state] = $stateData;
         }
