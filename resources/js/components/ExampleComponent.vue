@@ -1,0 +1,15 @@
+<template>
+  <div class="content">
+    <div class="title m-b-md">The Intelligent Startup Space</div>
+
+    <div class="links">Coming Soon</div>
+  </div>
+</template>
+
+<script>
+export default {
+  mounted() {
+    console.log("Component mounted.");
+  }
+};
+</script>
