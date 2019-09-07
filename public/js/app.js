@@ -37160,7 +37160,9 @@ var staticRenderFns = [
         _vm._v("The Intelligent Startup Space")
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "links" }, [_vm._v("Coming Soon")])
+      _c("div", { staticClass: "links" }, [
+        _vm._v("Coming Soon to a town near you")
+      ])
     ])
   }
 ]
