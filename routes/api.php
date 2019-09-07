@@ -1,6 +1,10 @@
 <?php
 
+use App\Region;
+use App\Occupation;
 use Illuminate\Http\Request;
+use App\Http\Resources\Regions;
+use App\Http\Resources\Occupations;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +19,12 @@ use Illuminate\Http\Request;
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::get('/regions', function () {
+    return new Regions(Region::all());
+});
+
+Route::get('/occupations', function () {
+    return new Occupations(Occupation::all());
 });
