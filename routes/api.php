@@ -28,3 +28,5 @@ Route::get('/regions', function () {
 Route::get('/occupations', function () {
     return new Occupations(Occupation::all());
 });
+
+Route::post('/search', '\App\Http\Controllers\Api\SearchController@search');
