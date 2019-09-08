@@ -32,6 +32,6 @@ class CreateNeisEnterprisesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('neis-enterprises');
     }
 }

@@ -45,6 +45,6 @@ class CreateMedianHousePricesTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('median-house-prices');
     }
 }

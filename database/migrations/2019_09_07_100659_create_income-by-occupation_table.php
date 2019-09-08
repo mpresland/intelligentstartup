@@ -37,6 +37,6 @@ class CreateIncomeByOccupationTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('income-by-occupation');
     }
 }
