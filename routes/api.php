@@ -1,10 +1,14 @@
 <?php
 
+use App\Skill;
 use App\Region;
 use App\Occupation;
+use App\StudyOption;
 use Illuminate\Http\Request;
+use App\Http\Resources\Skills;
 use App\Http\Resources\Regions;
 use App\Http\Resources\Occupations;
+use App\Http\Resources\StudyOptions;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +34,16 @@ Route::get('/occupations', function () {
 });
 
 Route::post('/search', '\App\Http\Controllers\Api\SearchController@search');
+
+Route::get('/skills', function () {
+    return new Skills(Skill::all());
+});
+
+Route::get('/studyoptions/{skill?}', function ($skill = null) {
+    if ($skill) {
+        $studyOptions = Skill::findOrFail($skill)->studyOptions;
+    } else {
+        $studyOptions = StudyOption::all();
+    }
+    return new StudyOptions($studyOptions);
+});

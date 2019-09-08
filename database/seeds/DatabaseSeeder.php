@@ -17,5 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MedianHousePricesTableSeeder::class);
         $this->call(OccupationSeeder::class);
         $this->call(RegionSeeder::class);
+        $this->call(SkillsSeeder::class);
+        $this->call(StudyOptionSeeder::class);
     }
 }
