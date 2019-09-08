@@ -33,6 +33,7 @@
         </div>
     </div>
     <div class="row result_row">
+        <!-- <p v-html="results"></p> -->
         <div class="col-12 result" v-for="(result, index) in results" :key="index">
             <h3>{{result.state}}</h3>
             <p class="score">Wage Score: {{result.wage_score}}/100</p>
@@ -69,14 +70,12 @@
             <h4>House Price Averages</h4>
             <p>Metro: ${{result.property.metro}}</p>
             <p>All: ${{result.property.all}}</p>
-        </div>
-        <div class="row">
-            <div class="col-12">
+            <div v-if="result.state == 'TAS'" class="col-12 tas">
                 <h4>Our Recommendation</h4>
                 <p>With all of these factors considered, our favourite location for launching a startup is Launceston TAS. This is because there is access to free coworking office space for startups called Enterprize, some of the lowest commute times in the country, world class natural tourist attractions within 20 minutes of the CBD and friendly locals. Launceston is also where this project was made! Check out <a target="_blank" href="https://enterprize.space">Enterprize</a> for more information on the coworking space, and the <a target="_blank" href="https://vandiemenproject.com.au/">Van Diemen Project</a> for free business support and advice in the heart of the Launceston CBD. If you're considering moving to Launceston, take a look at the <a href="https://www.launceston.tas.gov.au/Home" target="_blank">Launceston City Council website </a> for more information </p>
             </div>
         </div>
-    </div>
+    </div> 
     <div class="row data_row">
         <h2>Datasets used</h2>
         <p><a target="_blank" href="https://data.gov.au/dataset/ds-dga-932648b1-7ca1-46c4-99ba-d9a41f98d42f/details?q=NEIS">New Business Assistance with NEIS data
@@ -144,6 +143,16 @@
     width: 50vw;
     height: auto;
     max-width: 200px;
+}
+.data_row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.tas{
+    max-width: 800px;
 }
 .home_title_block{
     padding-bottom: 100px;

@@ -2071,6 +2071,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'home',
   data: function data() {
@@ -6731,7 +6740,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* light_blue: #25a9e0 */\n/* dark: #252e59; */\n/* General */\n.landing_container{\n    height: 100vh;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    margin: 0px;\n    max-width: 100vw;\n    padding: 0px;\n}\n.home_blue_row{\n    min-height: 50vh;\n      border-bottom-left-radius: 50% 20%;\n  border-bottom-right-radius: 50% 20%;\n  background-color: #252e59;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center;\n  align-items: center;\n  padding-top: 100px;\n}\n.form_row{\n    padding: 50px 0px;\n}\n.row{\n    width: 100%;\n}\n.result{\n    padding: 100px 0px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n}\n.result table{\n    margin-bottom: 10px;\n}\n.result td{\n    padding: 10px;\n}\n.logo_img{\n    width: 50vw;\n    height: auto;\n    max-width: 200px;\n}\n.home_title_block{\n    padding-bottom: 100px;\n    flex-direction: column;\n}\n.home_title{\n     font-family: 'oxanium';\n     font-size: 4rem;\n     color: white;\n}\n.blue{\n     color: #25a9e0;\n}\n.subtitle{\n     text-align: center;\n     color: white;\n     opacity: .8;\n}\n.button_block{\n     padding: 20px;\n     display: flex;\n     flex-direction: row;\n     justify-content: center;\n     align-items: center;\n     align-content: center;\n}\n.start_link{\n     text-align: center;\n     background-color: #252e59;\n     color: white;\n     padding: 10px 40px;\n     transition-duration: .2s;\n     cursor: pointer;\n     margin: 20px;\n}\n.start_link{\n     color: white;\n}\n.start_link:hover{\n     background-color: #25a9e0;\n     color: white;\n}\n.start_link:hover{\n     text-decoration: none;\n}\n/* Mobile */\n@media screen and (max-width: 600px){\n}\n/* Tablet */\n@media screen and (min-width:600px) and (max-width: 960px){\n}\n/* Laptop */\n@media screen and (min-width: 960px) and (max-width: 1264px){\n}\n/* Large Screens */\n@media screen and (min-width: 1264px){\n}\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/* light_blue: #25a9e0 */\n/* dark: #252e59; */\n/* General */\n.landing_container{\n    height: 100vh;\n    width: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n    align-items: center;\n    align-content: center;\n    text-align: center;\n    margin: 0px;\n    max-width: 100vw;\n    padding: 0px;\n}\n.home_blue_row{\n    min-height: 50vh;\n      border-bottom-left-radius: 50% 20%;\n  border-bottom-right-radius: 50% 20%;\n  background-color: #252e59;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-content: center;\n  align-items: center;\n  padding-top: 100px;\n}\n.form_row{\n    padding: 50px 0px;\n}\n.row{\n    width: 100%;\n}\n.result{\n    padding: 100px 0px;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n}\n.result table{\n    margin-bottom: 10px;\n}\n.result td{\n    padding: 10px;\n}\n.logo_img{\n    width: 50vw;\n    height: auto;\n    max-width: 200px;\n}\n.data_row{\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    align-content: center;\n}\n.tas{\n    max-width: 800px;\n}\n.home_title_block{\n    padding-bottom: 100px;\n    flex-direction: column;\n}\n.home_title{\n     font-family: 'oxanium';\n     font-size: 4rem;\n     color: white;\n}\n.blue{\n     color: #25a9e0;\n}\n.subtitle{\n     text-align: center;\n     color: white;\n     opacity: .8;\n}\n.button_block{\n     padding: 20px;\n     display: flex;\n     flex-direction: row;\n     justify-content: center;\n     align-items: center;\n     align-content: center;\n}\n.start_link{\n     text-align: center;\n     background-color: #252e59;\n     color: white;\n     padding: 10px 40px;\n     transition-duration: .2s;\n     cursor: pointer;\n     margin: 20px;\n}\n.start_link{\n     color: white;\n}\n.start_link:hover{\n     background-color: #25a9e0;\n     color: white;\n}\n.start_link:hover{\n     text-decoration: none;\n}\n/* Mobile */\n@media screen and (max-width: 600px){\n}\n/* Tablet */\n@media screen and (min-width:600px) and (max-width: 960px){\n}\n/* Laptop */\n@media screen and (min-width: 960px) and (max-width: 1264px){\n}\n/* Large Screens */\n@media screen and (min-width: 1264px){\n}\n", ""]);
 
 // exports
 
@@ -38559,78 +38568,80 @@ var render = function() {
     _c(
       "div",
       { staticClass: "row result_row" },
-      [
-        _vm._l(_vm.results, function(result, index) {
-          return _c("div", { key: index, staticClass: "col-12 result" }, [
-            _c("h3", [_vm._v(_vm._s(result.state))]),
-            _vm._v(" "),
-            _c("p", { staticClass: "score" }, [
-              _vm._v("Wage Score: " + _vm._s(result.wage_score) + "/100")
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "score" }, [
-              _vm._v(
-                "Property Score: " + _vm._s(result.property_score) + "/100"
-              )
-            ]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("Salary Averages")]),
-            _vm._v(" "),
-            _c(
-              "table",
-              [
-                _vm._m(1, true),
+      _vm._l(_vm.results, function(result, index) {
+        return _c("div", { key: index, staticClass: "col-12 result" }, [
+          _c("h3", [_vm._v(_vm._s(result.state))]),
+          _vm._v(" "),
+          _c("p", { staticClass: "score" }, [
+            _vm._v("Wage Score: " + _vm._s(result.wage_score) + "/100")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "score" }, [
+            _vm._v("Property Score: " + _vm._s(result.property_score) + "/100")
+          ]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("Salary Averages")]),
+          _vm._v(" "),
+          _c(
+            "table",
+            [
+              _vm._m(1, true),
+              _vm._v(" "),
+              _vm._l(result.wages, function(wage, index) {
+                return _c("tr", { key: index }, [
+                  _c("td", [_vm._v(_vm._s(wage.occupation))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$" + _vm._s(wage.individual))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(wage.quantity))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$" + _vm._s(wage.total))])
+                ])
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("Total Salary Cost: $" + _vm._s(result.state_total_wages))
+          ]),
+          _vm._v(" "),
+          _c("h4", [_vm._v("NEIS Summary")]),
+          _vm._v(" "),
+          _c(
+            "table",
+            [
+              _vm._m(2, true),
+              _vm._v(" "),
+              _vm._l(result.neis, function(area, index) {
+                return _c("tr", { key: index }, [
+                  _c("td", [_vm._v(_vm._s(area.region))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(area.enterprises))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(area.success_rate))])
+                ])
+              })
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c("h4", [_vm._v("House Price Averages")]),
+          _vm._v(" "),
+          _c("p", [_vm._v("Metro: $" + _vm._s(result.property.metro))]),
+          _vm._v(" "),
+          _c("p", [_vm._v("All: $" + _vm._s(result.property.all))]),
+          _vm._v(" "),
+          result.state == "TAS"
+            ? _c("div", { staticClass: "col-12 tas" }, [
+                _c("h4", [_vm._v("Our Recommendation")]),
                 _vm._v(" "),
-                _vm._l(result.wages, function(wage, index) {
-                  return _c("tr", { key: index }, [
-                    _c("td", [_vm._v(_vm._s(wage.occupation))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("$" + _vm._s(wage.individual))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(wage.quantity))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v("$" + _vm._s(wage.total))])
-                  ])
-                })
-              ],
-              2
-            ),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v("Total Salary Cost: $" + _vm._s(result.state_total_wages))
-            ]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("NEIS Summary")]),
-            _vm._v(" "),
-            _c(
-              "table",
-              [
-                _vm._m(2, true),
-                _vm._v(" "),
-                _vm._l(result.neis, function(area, index) {
-                  return _c("tr", { key: index }, [
-                    _c("td", [_vm._v(_vm._s(area.region))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(area.enterprises))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(area.success_rate))])
-                  ])
-                })
-              ],
-              2
-            ),
-            _vm._v(" "),
-            _c("h4", [_vm._v("House Price Averages")]),
-            _vm._v(" "),
-            _c("p", [_vm._v("Metro: $" + _vm._s(result.property.metro))]),
-            _vm._v(" "),
-            _c("p", [_vm._v("All: $" + _vm._s(result.property.all))])
-          ])
-        }),
-        _vm._v(" "),
-        _vm._m(3)
-      ],
-      2
+                _vm._m(3, true)
+              ])
+            : _vm._e()
+        ])
+      }),
+      0
     ),
     _vm._v(" "),
     _vm._m(4)
@@ -38689,46 +38700,37 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-12" }, [
-        _c("h4", [_vm._v("Our Recommendation")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "With all of these factors considered, our favourite location for launching a startup is Launceston TAS. This is because there is access to free coworking office space for startups called Enterprize, some of the lowest commute times in the country, world class natural tourist attractions within 20 minutes of the CBD and friendly locals. Launceston is also where this project was made! Check out "
-          ),
-          _c(
-            "a",
-            { attrs: { target: "_blank", href: "https://enterprize.space" } },
-            [_vm._v("Enterprize")]
-          ),
-          _vm._v(" for more information on the coworking space, and the "),
-          _c(
-            "a",
-            {
-              attrs: {
-                target: "_blank",
-                href: "https://vandiemenproject.com.au/"
-              }
-            },
-            [_vm._v("Van Diemen Project")]
-          ),
-          _vm._v(
-            " for free business support and advice in the heart of the Launceston CBD. If you're considering moving to Launceston, take a look at the "
-          ),
-          _c(
-            "a",
-            {
-              attrs: {
-                href: "https://www.launceston.tas.gov.au/Home",
-                target: "_blank"
-              }
-            },
-            [_vm._v("Launceston City Council website ")]
-          ),
-          _vm._v(" for more information ")
-        ])
-      ])
+    return _c("p", [
+      _vm._v(
+        "With all of these factors considered, our favourite location for launching a startup is Launceston TAS. This is because there is access to free coworking office space for startups called Enterprize, some of the lowest commute times in the country, world class natural tourist attractions within 20 minutes of the CBD and friendly locals. Launceston is also where this project was made! Check out "
+      ),
+      _c(
+        "a",
+        { attrs: { target: "_blank", href: "https://enterprize.space" } },
+        [_vm._v("Enterprize")]
+      ),
+      _vm._v(" for more information on the coworking space, and the "),
+      _c(
+        "a",
+        {
+          attrs: { target: "_blank", href: "https://vandiemenproject.com.au/" }
+        },
+        [_vm._v("Van Diemen Project")]
+      ),
+      _vm._v(
+        " for free business support and advice in the heart of the Launceston CBD. If you're considering moving to Launceston, take a look at the "
+      ),
+      _c(
+        "a",
+        {
+          attrs: {
+            href: "https://www.launceston.tas.gov.au/Home",
+            target: "_blank"
+          }
+        },
+        [_vm._v("Launceston City Council website ")]
+      ),
+      _vm._v(" for more information ")
     ])
   },
   function() {
