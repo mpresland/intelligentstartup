@@ -11,41 +11,66 @@
         <div class="col-12">
             <form action="" method="post">
                
-                <label for="regionSelected">Choose your region</label>
+                <label for="regionSelected">Where are you? </label>
                 <select v-model="regionSelected" name="region" id="region">
                     <option v-for="(region, index) in regions" :key="index" :value="region.id">{{region.region}} {{region.state}}</option>
                 </select> <br>
                 <label for="occupation1">Choose types of people you need</label>
                 <select v-model="occupation1" name="occupation1" id="occupation1">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many?</p><input v-model="occupation1qty" type="number"> <br>
+                </select><p>How many {{occupation1}}'s do you need? <input v-model="occupation1qty" type="number"></p><br>
                 <label for="occupation2">Choose types of people you need</label>
                 <select v-model="occupation2" name="occupation2" id="occupation2">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many?</p><input v-model="occupation2qty" type="number">  <br>
+                </select><p>How many {{occupation2}}'s do you need?<input v-model="occupation2qty" type="number"></p><br>
                 <label for="occupation3">Choose types of people you need</label>
                 <select v-model="occupation3" name="occupation3" id="occupation3">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many?</p><input v-model="occupation3qty" type="number">  <br>
+                </select><p>How many {{occupation3}}'s do you need?<input v-model="occupation3qty" type="number"></p><br>
             </form>
             <button @click="getResults">Compare locations</button>
             
         </div>
     </div>
     <div class="row result_row">
-        <div class="col-12">
-            <h1 v-html="searchJSON"></h1>
-        </div>
         <div class="col-12 result" v-for="(result, index) in results" :key="index">
-            <p>{{index}} : {{result}}</p>
             <h3>{{index}}</h3>
             <p class="score">Wage Score: {{result.wage_score}}/100</p>
             <p class="score">Property Score: {{result.property_score}}/100</p>
-            
+            <h4>Salary Averages</h4>
+            <table>
+                <tr>
+                    <th>Occupation</th>
+                    <th>Avg. Salary</th>
+                    <th>Quantity</th>
+                    <th>Estimated Cost</th>
+                </tr>
+                <tr v-for="(wage, index) in result.wages" :key="index">
+                    <td>{{wage.occupation}}</td>
+                    <td>${{wage.individual}}</td>
+                    <td>{{wage.quantity}}</td>
+                    <td>${{wage.total}}</td>
+                </tr>
+            </table>
+            <p>Total Salary Cost: ${{result.state_total_wages}}</p>
+            <h4>NEIS Summary</h4>
+            <table>
+                <tr>
+                    <th>Area</th>
+                    <th>Number of NEIS Businesses</th>
+                    <th>NEIS Sucess Rate (%)</th>
+                </tr>
+                <tr v-for="(area, index) in result.neis" :key="index">
+                    <td>{{area.region}}</td>
+                    <td>{{area.enterprises}}</td>
+                    <td>{{area.success_rate}}</td>
+                </tr>
+            </table>
+            <h4>House Price Averages</h4>
+            <p>Metro: ${{result.property.metro}}</p>
+            <p>All: ${{result.property.all}}</p>
         </div>
     </div>
-    <div v-html="results"></div>
-
 </div>
 
 </template>
@@ -83,6 +108,20 @@
 }
 .row{
     width: 100%;
+}
+.result{
+    padding: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.result table{
+    margin-bottom: 10px;
+}
+.result td{
+    padding: 10px;
 }
 .logo_img{
     width: 50vw;
