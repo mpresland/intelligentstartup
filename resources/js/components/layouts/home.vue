@@ -18,15 +18,15 @@
                 <label for="occupation1">Choose types of people you need</label>
                 <select v-model="occupation1" name="occupation1" id="occupation1">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many {{occupation1}}'s do you need? <input v-model="occupation1qty" type="number"></p><br>
+                </select><p>How many do you need? <input v-model="occupation1qty" type="number"></p><br>
                 <label for="occupation2">Choose types of people you need</label>
                 <select v-model="occupation2" name="occupation2" id="occupation2">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many {{occupation2}}'s do you need?<input v-model="occupation2qty" type="number"></p><br>
+                </select><p>How many do you need?<input v-model="occupation2qty" type="number"></p><br>
                 <label for="occupation3">Choose types of people you need</label>
                 <select v-model="occupation3" name="occupation3" id="occupation3">
                     <option v-for="(occupation, index) in occupations" :key="index" :value="occupation.id">{{occupation.occupation}}</option>
-                </select><p>How many {{occupation3}}'s do you need?<input v-model="occupation3qty" type="number"></p><br>
+                </select><p>How many do you need?<input v-model="occupation3qty" type="number"></p><br>
             </form>
             <button @click="getResults">Compare locations</button>
             
@@ -34,7 +34,7 @@
     </div>
     <div class="row result_row">
         <div class="col-12 result" v-for="(result, index) in results" :key="index">
-            <h3>{{index}}</h3>
+            <h3>{{result.state}}</h3>
             <p class="score">Wage Score: {{result.wage_score}}/100</p>
             <p class="score">Property Score: {{result.property_score}}/100</p>
             <h4>Salary Averages</h4>
@@ -69,7 +69,9 @@
             <h4>House Price Averages</h4>
             <p>Metro: ${{result.property.metro}}</p>
             <p>All: ${{result.property.all}}</p>
-            <div class="tas" v-if="index == 'TAS'">
+        </div>
+        <div class="row">
+            <div class="col-12">
                 <h4>Our Recommendation</h4>
                 <p>With all of these factors considered, our favourite location for launching a startup is Launceston TAS. This is because there is access to free coworking office space for startups called Enterprize, some of the lowest commute times in the country, world class natural tourist attractions within 20 minutes of the CBD and friendly locals. Launceston is also where this project was made! Check out <a target="_blank" href="https://enterprize.space">Enterprize</a> for more information on the coworking space, and the <a target="_blank" href="https://vandiemenproject.com.au/">Van Diemen Project</a> for free business support and advice in the heart of the Launceston CBD. If you're considering moving to Launceston, take a look at the <a href="https://www.launceston.tas.gov.au/Home" target="_blank">Launceston City Council website </a> for more information </p>
             </div>
