@@ -161,6 +161,10 @@ class SearchController extends Controller
             $searchData[$state]['property_score'] = round(round($bestProperty / $stateData['property']['metro'], 2) * 100);
         }
 
+        usort($searchData, function ($a, $b) {
+            return ($a['wage_score'] + $a['property_score']) <=> ($b['wage_score'] + $b['property_score']);
+        });
+
 
 
         return json_encode($searchData);
