@@ -134,6 +134,35 @@ class SearchController extends Controller
             $searchData[$state->state] = $stateData;
         }
 
+        /**
+         * Calculate wage, property and neis scores
+         */
+
+        $bestWages = null;
+        $bestProperty = null;
+
+        // find best value wages and property
+        foreach ($searchData as $state => $stateData) {
+            if (is_null($bestWages) || ($stateData['state_total_wages'] < $bestWages)) {
+                $bestWages = $stateData['state_total_wages'];
+            }
+
+            if (is_null($bestProperty) || ($stateData['property']['metro'] < $bestProperty)) {
+                $bestProperty = $stateData['property']['metro'];
+            }
+        }
+
+        // calculate state scores
+        foreach ($searchData as $state => $stateData) {
+            // calculate wage score
+            $searchData[$state]['wage_score'] = round(round($bestWages / $stateData['state_total_wages'], 2) * 100);
+
+            // calculate property score
+            $searchData[$state]['property_score'] = round(round($bestProperty / $stateData['property']['metro'], 2) * 100);
+        }
+
+
+
         return json_encode($searchData);
     }
 }
