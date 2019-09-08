@@ -64,7 +64,7 @@ class SearchController extends Controller
                 $occupationWages['quantity'] = $stateOccupation->quantity;
                 $occupationWages['total'] = $stateOccupation->quantity * (int) $stateOccupation->median_total_income * 1000;
                 $totalWages += $occupationWages['total'];
-                $stateData['wages'] = $occupationWages;
+                $stateData['wages'][] = $occupationWages;
             }
             $stateData['state_total_wages'] = $totalWages;
 
