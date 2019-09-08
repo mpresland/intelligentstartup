@@ -168,8 +168,6 @@ class SearchController extends Controller
             return $b['total_score'] <=> $a['total_score'];
         });
 
-        dd($searchData);
-
         return json_encode($searchData);
     }
 }
